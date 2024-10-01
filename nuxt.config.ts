@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     '@nuxt/image'
   ],
   app: {
+    baseURL: '/ecosprint/',
     head: {
       title: '',
       htmlAttrs: {
