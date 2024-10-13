@@ -22,13 +22,18 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/ecosprint/',
     head: {
-      title: '',
+      title: 'EcoSprint 奔奔寵食',
       htmlAttrs: {
         lang: 'zh'
       },
+      link: [
+        { rel: "icon", type: "shortcut icon", href: "favicon.ico" },
+        { rel: "icoapple-touch-iconn", sizes: "180x180", href: "apple-touch-icon.png" },
+      ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { charset: 'utf-8' },
+        { name: 'apple-mobile-web-app-title', content: 'EcoSprint' },
       ],
       noscript: [
         { children: 'JavaScript is required' },

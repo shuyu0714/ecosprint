@@ -1,9 +1,8 @@
 <template>
-  <div>首頁</div>
+  <div>
+    <Header />
+  </div>
 </template>
 
 <script setup>
-useHead({
-  title: ''
-})
 </script>
