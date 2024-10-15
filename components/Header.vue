@@ -53,9 +53,9 @@ header {
         justify-content: space-between;
         li {
             a {
-                font-size: 20px;
+                font-size: 32px;
                 padding: 0 45px;
-                font-size: max(18px, 1.6667vw);
+                // font-size: max(18px, 1.6667vw);
                 padding: 0 max(28px, 4.47917vw);
                 
                 @media screen and (max-width: 767px) {

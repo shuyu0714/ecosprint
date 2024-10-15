@@ -6,7 +6,7 @@
                     <NuxtImg src="/icon/logo-ecosprint-green.svg" class="img-fluid" alt="EcoSprint 奔奔 Logo" />
                     <h1 class="text-primary my-md-4">生態友善寵食</h1>
                     <div class="slogan">
-                        <NuxtImg src="/img/img-slogan.svg" class="img-fluid" alt="EcoSprint 奔奔 - 關懷土地、寵愛毛孩，這份愛永續不停歇" />
+                        <NuxtImg src="/img/img-slogan.svg" class="img-fluid w-100" alt="EcoSprint 奔奔 - 關懷土地、寵愛毛孩，這份愛永續不停歇" />
                     </div>
                 </div>
                 <div class="ecosprint-intro text-center">
@@ -19,13 +19,13 @@
                         更進一步希望能將農食教育帶入
                         並促進家庭成員互動
                     </p>
-                    <p>
+                    <p class="mb-0">
                         奔奔的首支商品正在嘖嘖募資
                         請與我們一起為生態為環境盡一份心力吧！
                     </p>
                 </div>
             </div>
-            <NuxtImg src="/img/img-about.svg" class="img-fluid" alt="EcoSprint 奔奔 Logo" />
+            <NuxtImg src="/img/img-about.svg" class="img-fluid w-100" alt="EcoSprint 奔奔 Logo" />
         </div>
     </section>
 </template>
@@ -47,7 +47,7 @@ section {
     }
 }
 .about-ecosprint {
-    margin-bottom: 5.46875%;
+    margin: 0 auto 5.46875%;
     @media screen and (min-width: 768px) {
         width: 85.9375%;
         grid-template-columns: 38.18182% 1fr;
@@ -62,6 +62,7 @@ section {
             margin: auto;
         }
         > img {
+            width: 70%;
             @media screen and (max-width: 767px) {
                 width: 69.69697%;
             }
@@ -76,6 +77,7 @@ section {
     h1 {
         font-size: 64px;
         font-weight: 900;
+        // font-size: clamp(40px, 3.333vw, 64px);
         @media screen and (max-width: 767px) {
             font-size: clamp(24px, 6.4vw, 28px);
             margin: 9px 0 16px;
@@ -83,6 +85,7 @@ section {
     }
     p {
         font-size: 24px;
+        // font-size: clamp(18px, 1.25vw, 24px);
         @media screen and (max-width: 767px) {
             font-size: clamp(12px, 3.2vw, 16px);
         }
