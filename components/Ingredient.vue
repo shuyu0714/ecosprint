@@ -4,7 +4,7 @@
             <div class="ingredient-list d-grid">
                 <div class="ingredient-item" v-for="ingredient in ingredients" :key="ingredient">
                     <div class="ratio ratio-1x1">
-                        <NuxtImg :src="`/img/${ingredient.image}`" />
+                        <NuxtImg :src="`/img/4_ingredient/${ingredient.image}`" />
                     </div>
                     <h3 class="text-center mb-1">{{ ingredient.name }}</h3>
                     <p>{{ ingredient.des }}</p>
@@ -16,14 +16,14 @@
 
 <script setup>
     const ingredients = ref([
-        { image: 'img-ingredient1.svg', name: '紅龍果', des: '火龍果富含膳食纖維及甜菜紅素，促進腸道保健' },
-        { image: 'img-ingredient2.svg', name: '無毒蜂子', des: '蜂子具豐富胺基酸及牛磺酸，維持免疫力' },
-        { image: 'img-ingredient3.svg', name: '紫山藥', des: '豐富維生素、花青素及膳食纖維，取代膠類幫助餐包成形' },
-        { image: 'img-ingredient4.svg', name: '雞肉', des: '國產優質雞肉，高蛋白低脂肪、富含支鏈胺基酸（BCAA）' },
-        { image: 'img-ingredient5.svg', name: '烏魚', des: '烏魚殼(肉)含有不飽和脂肪酸及維生素B12，有益皮毛健康' },
-        { image: 'img-ingredient6.svg', name: '水針魚', des: '富含牛磺酸、維生素、礦物質、肉質白細、脆而帶甜味' },
-        { image: 'img-ingredient7.svg', name: '白帶魚', des: '富含Omega-3、維生素B12、菸鹼酸幫助生長與代謝' },
-        { image: 'img-ingredient8.svg', name: '虱目魚', des: '富含維生素A、Omaga-3，幫助降低膽固醇、保護心臟' },
+        { image: 'img-ingredient1.png', name: '紅龍果', des: '火龍果富含膳食纖維及甜菜紅素，促進腸道保健' },
+        { image: 'img-ingredient2.png', name: '無毒蜂子', des: '蜂子具豐富胺基酸及牛磺酸，維持免疫力' },
+        { image: 'img-ingredient3.png', name: '紫山藥', des: '豐富維生素、花青素及膳食纖維，取代膠類幫助餐包成形' },
+        { image: 'img-ingredient4.png', name: '雞肉', des: '國產優質雞肉，高蛋白低脂肪、富含支鏈胺基酸（BCAA）' },
+        { image: 'img-ingredient5.png', name: '烏魚', des: '烏魚殼(肉)含有不飽和脂肪酸及維生素B12，有益皮毛健康' },
+        { image: 'img-ingredient6.png', name: '水針魚', des: '富含牛磺酸、維生素、礦物質、肉質白細、脆而帶甜味' },
+        { image: 'img-ingredient7.png', name: '白帶魚', des: '富含Omega-3、維生素B12、菸鹼酸幫助生長與代謝' },
+        { image: 'img-ingredient8.png', name: '虱目魚', des: '富含維生素A、Omaga-3，幫助降低膽固醇、保護心臟' },
     ])
 </script>
 

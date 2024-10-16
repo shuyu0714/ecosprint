@@ -36,6 +36,7 @@
 <style lang="scss" scoped>
 section {
     padding: 150px 0;
+    // background: no-repeat left bottom / 100% url(../assets/images/img/img-about.svg);
     @media screen and (max-width: 767px) {
         padding: 32px 18px;
     }

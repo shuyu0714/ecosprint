@@ -4,6 +4,7 @@
     <Banner />
     <About />
     <Ingredient />
+    <Traceability />
   </div>
 </template>
 
