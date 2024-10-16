@@ -6,6 +6,7 @@
     <Ingredient />
     <Traceability />
     <Report />
+    <Footer />
   </div>
 </template>
 
