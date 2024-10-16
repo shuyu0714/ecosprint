@@ -31,7 +31,10 @@ $bg1: #EBEDDF;
 $bg2: #F2F2F2;
 $head-color: #808080;
 section {
-    padding: 75px 0 66px;
+    padding: 3.90625vw 0 11.90625vw;
+    @media screen and (max-width: 767px) {
+        padding: 11.4667vw 0 18.8667vw;
+    }
     .wrapper {
         width: 86.97916%;
         margin: auto;

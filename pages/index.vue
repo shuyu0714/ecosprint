@@ -5,6 +5,7 @@
     <About />
     <Ingredient />
     <Traceability />
+    <Report />
   </div>
 </template>
 
