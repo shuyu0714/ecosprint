@@ -88,7 +88,7 @@ section {
         font-size: 24px;
         // font-size: clamp(18px, 1.25vw, 24px);
         @media screen and (max-width: 767px) {
-            font-size: clamp(12px, 3.2vw, 16px);
+            font-size: clamp(12px, .8333vw, 16px);
         }
     }
 }
