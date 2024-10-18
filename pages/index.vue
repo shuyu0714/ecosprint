@@ -2,6 +2,7 @@
   <div>
     <Header />
     <Banner />
+    <Products />
     <About />
     <Ingredient />
     <Traceability />
