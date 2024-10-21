@@ -60,7 +60,7 @@ footer {
         justify-content: center;
     }
     .logo {
-        width: clamp(55px, 7.08333vw, 136px);
+        width: clamp(55px, 7.0834vw, 136px);
         margin-right: 22px;
     }
     .company {

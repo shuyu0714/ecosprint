@@ -33,13 +33,13 @@ $head-color: #808080;
 section {
     padding: 3.90625vw 0 11.90625vw;
     @media screen and (max-width: 767px) {
-        padding: 11.4667vw 0 18.8667vw;
+        padding: 43px 0 52px;
     }
     .wrapper {
         width: 86.97916%;
         margin: auto;
         @media screen and (max-width: 767px) {
-            width: 90.1333vw;
+            width: 90.134vw;
         }
     }
 }
@@ -59,7 +59,7 @@ section {
     $total: 3;
     position: relative;
     padding: 2.604167vw 2.86458vw 16.6667vw;
-    border-top-right-radius: 60px;
+    border-top-right-radius: 80px;
     flex-direction: column;
     justify-content: space-between;
     &:nth-child(odd) {
@@ -76,9 +76,11 @@ section {
         }
     }
     @media screen and (max-width: 767px) {
+        border-top-right-radius: 0;
+        border-top-left-radius: 36px;
         flex-direction: row;
-        padding: 8vw 20.5333vw 9.6vw 8vw;
-        width: 81.0651%;
+        padding: 8vw 20.5333vw 9.6vw 7.47vw;
+        width: 82.841%;
     }
     .ratio {
         width: calc(100% - 2.86458vw - 2.86458vw);
@@ -88,37 +90,52 @@ section {
         // margin-left: 2.86458vw;
         &::before {
             padding-top: 123.809%;
+            @media screen and (max-width: 767px) {
+                padding-top: 120.589%;
+            }
         }
         @media screen and (max-width: 767px) {
-            width: 40.5325%;
+            width: 48.575%;
             right: -23%;
+            // bottom: 50%;
+            // transform: translateY(50%);
         }
     }
     h4 {
         color: $head-color;
         font-weight: 700;
-        font-size: 34px;
-        font-size: clamp(15px, 1.77083vw, 34px);
+        font-size: 28px;
+        font-size: clamp(18px, 1.4583vw, 28px);
+        line-height: 1.46;
         @media screen and (max-width: 767px) {
-            font-size: max(14px, 3.7333vw);
+            font-size: 18px;
+        }
+        @media screen and (max-width: 575px) {
+            font-size: 14px;
         }
     }
     h3 {
-        font-size: 42px;
-        font-size: clamp(20px, 2.1875vw, 42px);
+        font-size: 36px;
+        font-size: clamp(22px, 1.875vw, 36px);
         font-weight: 700;
         color: $head-color;
         @media screen and (max-width: 767px) {
-            font-size: max(17px, 4.5333vw);
+            font-size: 22px;
+        }
+        @media screen and (max-width: 575px) {
+            font-size: 17px;
         }
     }
     p {
-        font-size: 24px;
-        font-size: clamp(15px, 1.25vw, 24px);
+        font-size: 20px;
+        font-size: clamp(16px, 1.04167vw, 20px);
         margin-bottom: 0;
         color: $head-color;
         @media screen and (max-width: 767px) {
-            font-size: clamp(12px, 3.2vw, 16px);
+            font-size: 16px;
+        }
+        @media screen and (max-width: 575px) {
+            font-size: 11px;
         }
     }
 }

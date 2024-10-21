@@ -4,6 +4,7 @@
 
             <swiper 
                 v-if="thumbsSwiper !== null"
+                :effect="coverflow"
                 :loop="true"
                 :spaceBetween="10"
                 :navigation="false"
@@ -11,22 +12,23 @@
                 :modules="[FreeMode, Navigation, Thumbs]"
                 class="mySwiper2"
             >
-                <swiper-slide class="product d-flex align-items-start justify-content-center"
-                    v-for="product in products" :key="product">
-                    <div class="name">
-                        <h2 class="zh">{{ product.name }}</h2>
-                        <h2 class="en">{{ product.en }}</h2>
-                    </div>
-                    <div class="cover ratio ratio-1x1">
-                        <NuxtImg class="img-fluid" :src="`/img/2_products/img-product-${product.image}.png`" />
-                    </div>
-                    <div class="intro">
-                        <p class="mb-0">{{ product.des }}</p>
+                <swiper-slide v-for="product in products" :key="product">
+                    <div class="product d-flex align-items-start justify-content-center">
+                        <div class="name">
+                            <h2 class="zh">{{ product.name }}</h2>
+                            <h2 class="en">{{ product.en }}</h2>
+                        </div>
+                        <div class="cover ratio">
+                            <NuxtImg class="img-fluid" :src="`/img/2_products/img-product-${product.image}.png`" />
+                        </div>
+                        <div class="intro">
+                            <p class="mb-0">{{ product.des }}</p>
+                        </div>
                     </div>
                 </swiper-slide>
             </swiper>
 
-            <div class="settingsList">
+            <div class="settingsList d-none">
                 <swiper
                     @swiper="setThumbsSwiper"
                     :loop="true"
@@ -38,7 +40,7 @@
                 >
                     <swiper-slide class="product d-flex align-items-start justify-content-center"
                         v-for="product in products" :key="product">
-                        <div class="cover ratio ratio-1x1">
+                        <div class="cover ratio">
                             <NuxtImg class="img-fluid" :src="`/img/2_products/img-product-${product.image}.png`" />
                         </div>
                     </swiper-slide>
@@ -85,31 +87,40 @@ section {
     }
 }
 .product {
+    padding-left: 11.875vw;
     .name {
+        width: 9.375vw;
+        width: 180px;
+        text-align: center;
         .zh {
-            font-size: 40px;
+            font-size: 36px;
+            font-size: clamp(28px, 1.875vw, 36px);
             font-weight: 900;
             color: $color1;
         }
         .en {
-            font-size: 35px;
+            font-size: 32px;
+            font-size: clamp(26px, 1.67vw, 32px);
             font-weight: 500;
             color: $color2;
             text-transform: uppercase;
         }
     }
     .cover {
-        width: 33.333vw;
-        img {
+        width: 18.34vw;
+        margin: 0 5.20834vw;
+        &::before {
+            padding-bottom: 153.125%;
         }
     }
     .intro {
-        width: 21.875vw;
-        padding-left: 40px;
+        width: 22.1875vw;
+        padding-left: 2.0834vw;
         border-left: 8px solid $color2;
         p {
             color: $color3;
-            font-size: 24px;
+            font-size: 20px;
+            font-size: clamp(16px, 1.04167vw, 20px);
         }
     }
 }

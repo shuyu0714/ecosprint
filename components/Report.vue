@@ -19,6 +19,7 @@ section {
 }
 img {
     width: 51.04167vw;
+    max-width: 720px;
     @media screen and (max-width: 767px) {
         width: 96vw;
     }

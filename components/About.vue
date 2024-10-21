@@ -4,9 +4,9 @@
             <div class="about-ecosprint d-grid align-items-center">
                 <div class="ecosprint-brand text-center">
                     <NuxtImg src="/icon/logo-ecosprint-green.svg" class="img-fluid" alt="EcoSprint 奔奔 Logo" />
-                    <h1 class="text-primary my-md-4">生態友善寵食</h1>
+                    <h1 class="text-primary">生態友善寵食</h1>
                     <div class="slogan">
-                        <NuxtImg src="/img/img-slogan.svg" class="img-fluid w-100" alt="EcoSprint 奔奔 - 關懷土地、寵愛毛孩，這份愛永續不停歇" />
+                        <NuxtImg src="/img/img-slogan.svg" class="img-fluid" alt="EcoSprint 奔奔 - 關懷土地、寵愛毛孩，這份愛永續不停歇" />
                     </div>
                 </div>
                 <div class="ecosprint-intro text-center">
@@ -35,24 +35,31 @@
 
 <style lang="scss" scoped>
 section {
-    padding: 150px 0;
-    // background: no-repeat left bottom / 100% url(../assets/images/img/img-about.svg);
+    padding: 120px 0 64px;
     @media screen and (max-width: 767px) {
-        padding: 32px 18px;
+        padding: 38px 0 32px;
     }
     .wrapper {
+        width: 90.67%;
         margin: auto;
         @media screen and (min-width: 768px) {
-            width: 66.6667%;
+            width: 75.6667vw;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 66.6667vw;
         }
     }
 }
 .about-ecosprint {
     margin: 0 auto 5.46875%;
     @media screen and (min-width: 768px) {
-        width: 85.9375%;
-        grid-template-columns: 38.18182% 1fr;
-        gap: 0 20.7272%;
+        width: 80.9375%;
+        grid-template-columns: max-content 52.7079%;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 75.9375%;
+        grid-template-columns: max-content 46.7079%;
     }
     @media screen and (max-width: 767px) {
         margin-bottom: 32px;
@@ -63,32 +70,42 @@ section {
             margin: auto;
         }
         > img {
-            width: 70%;
+            width: 15.3125vw;
             @media screen and (max-width: 767px) {
-                width: 69.69697%;
+                width: 115px;
+            }
+        }
+        .slogan {
+            img {
+                width: 20.834vw;
+                @media screen and (max-width: 767px) {
+                    width: 165px;
+                }
             }
         }
     }
     .ecosprint-intro {
         @media screen and (max-width: 767px) {
-            width: 67.26%;
+            // width: 67.059%;
+            width: 90.059%;
             margin: 16px auto 0;
         }
     }
     h1 {
-        font-size: 64px;
+        font-size: 48px;
         font-weight: 900;
-        // font-size: clamp(40px, 3.333vw, 64px);
+        margin: 24px 0 28px;
+        font-size: clamp(36px, 2.5vw, 48px);
         @media screen and (max-width: 767px) {
-            font-size: clamp(24px, 6.4vw, 28px);
-            margin: 9px 0 16px;
+            // font-size: clamp(24px, 6.4vw, 28px);
+            font-size: 24px;
+            margin: 10px 0 16px;
         }
     }
-    p {
-        font-size: 24px;
-        // font-size: clamp(18px, 1.25vw, 24px);
+    p { 
+        font-size: clamp(16px, 1.04167vw, 20px);
         @media screen and (max-width: 767px) {
-            font-size: clamp(12px, .8333vw, 16px);
+            font-size: 15px;
         }
     }
 }

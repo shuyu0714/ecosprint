@@ -17,8 +17,8 @@ h2 {
     color: $head-color;
     display: flex;
     align-items: baseline;
-    font-size: 58px;
-    font-size: clamp(32px, 3.02083vw, 58px);
+    font-size: 48px;
+    font-size: clamp(32px, 2.5vw, 48px);
     font-weight: 500;
     @media screen and (max-width: 767px) {
         font-size: 24px;
@@ -34,6 +34,7 @@ h2 {
         background-color: $head-color;
         @media screen and (max-width: 767px) {
             flex-grow: 1;
+            height: 1px;
         }
     }
     &::before {

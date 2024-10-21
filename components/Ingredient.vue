@@ -6,7 +6,7 @@
                     <div class="ratio ratio-1x1">
                         <NuxtImg :src="`/img/4_ingredient/${ingredient.image}`" />
                     </div>
-                    <h3 class="text-center mb-1">{{ ingredient.name }}</h3>
+                    <h3 class="text-center mb-2">{{ ingredient.name }}</h3>
                     <p>{{ ingredient.des }}</p>
                 </div>
             </div>
@@ -32,20 +32,20 @@ $bg: #B7BBAF;
 $bg2: #F8F7E9;
 section {
     background-color: $bg;
-    padding: 100px 0;
+    padding: 100px 0 80px;
     @media screen and (max-width: 768px) {
         padding: 44px 0;
     }
     .wrapper {
-        width: 76.875%;
+        width: 75vw;
         margin: auto;
         @media screen and (max-width: 768px) {
-            width: 87.2%;
+            width: 86.4%;
         }
     }
 }
 .ingredient-list {
-    grid-template-columns: repeat(4, 20.3252%);
+    grid-template-columns: repeat(4, 20.834%);
     justify-content: space-between;
     gap: 56px 0;
     @media screen and (max-width: 1280px) {
@@ -53,31 +53,39 @@ section {
     }
     @media screen and (max-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
-        gap: 9.174vw 7.339vw;
+        gap: 8vw 7.41%;
     }
 }
 .ingredient-item {
     background-color: $bg2;
     padding: 45px 28px 20px;
-    border-top-left-radius: 160px;
-    border-top-right-radius: 160px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    @media screen and (max-width: 768px) {
+        padding: 22px 14px 10px;
+        border-top-left-radius: 75px;
+        border-top-right-radius: 75px;
+    }
     .ratio {
         width: 86.0656%;
         margin: auto;
+        @media screen and (max-width: 768px) {
+            width: 28vw;
+        }
     }
     h3 {
         font-size: 24px;
         color: #666;
         @media screen and (max-width: 768px) {
-            font-size: clamp(12px, 3.2vw, 16px);
+            font-size: 17px;
         }
     }
     p {
-        font-size: 20px;
+        font-size: 16px;
         margin-bottom: 0;
         color: #555;
         @media screen and (max-width: 768px) {
-            font-size: clamp(10px, 2.6667vw, 16px);
+            font-size: 15px
         }
     }
 }
