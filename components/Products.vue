@@ -1,18 +1,16 @@
 <template>
     <section>
         <div class="wrapper">
-
-            <swiper 
+            <swiper-container
                 v-if="thumbsSwiper !== null"
-                :effect="coverflow"
                 :loop="true"
-                :spaceBetween="10"
+                :slides-per-view="1"
+                :centered-slides="true"
+                :effect="coverflow"
                 :navigation="false"
-                :thumbs="{ swiper: thumbsSwiper }"
-                :modules="[FreeMode, Navigation, Thumbs]"
-                class="mySwiper2"
+                class="mainProduct"
             >
-                <swiper-slide v-for="product in products" :key="product">
+                <swiper-slide v-for="product in products" :key="product.id">
                     <div class="product d-flex align-items-start justify-content-center">
                         <div class="name">
                             <h2 class="zh">{{ product.name }}</h2>
@@ -26,44 +24,35 @@
                         </div>
                     </div>
                 </swiper-slide>
-            </swiper>
+            </swiper-container>
 
-            <div class="settingsList d-none">
-                <swiper
-                    @swiper="setThumbsSwiper"
-                    :loop="true"
-                    :spaceBetween="10"
-                    :slidesPerView="4"
-                    :watchSlidesProgress="true"
-                    :modules="[FreeMode, Navigation, Thumbs]"
-                    class="mySwiper"
-                >
-                    <swiper-slide class="product d-flex align-items-start justify-content-center"
-                        v-for="product in products" :key="product">
-                        <div class="cover ratio">
-                            <NuxtImg class="img-fluid" :src="`/img/2_products/img-product-${product.image}.png`" />
-                        </div>
-                    </swiper-slide>
-                </swiper>
-            </div>
+            <ul class="settingsList list-unstyled d-flex justify-content-between align-items-end">
+                <li class="product d-flex align-items-start justify-content-center"
+                    v-for="product in products" :key="product.id">
+                    <div class="cover ratio">
+                        <NuxtImg class="img-fluid" :src="`/img/2_products/img-product-${product.image}.png`" />
+                    </div>
+                </li>
+                <li class="product d-flex align-items-start justify-content-center"
+                    v-for="product in products" :key="product.id">
+                    <div class="cover ratio">
+                        <NuxtImg class="img-fluid" :src="`/img/2_products/img-product-${product.image}.png`" />
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 </template>
 
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-const thumbsSwiper = ref(null);
-
-const setThumbsSwiper = (swiper) => {
-    thumbsSwiper.value = swiper;
-};
+import { register } from 'swiper/element/bundle';
+register();
 
 const products = ref([
-    { image: '香燉嫩雞', name: '香燉嫩雞', en: 'chicken',  des: '單一肉源減少毛孩過敏機率，餐包添加蜂王胎、火龍果，提升抵抗力、促進腸道蠕動及平衡健康菌叢' },
-    { image: '白帶魚雞肉', name: '白帶魚 & 雞肉', en: 'Hairtail & Chicken',  des: '單一肉源減少毛孩過敏機率，餐包添加蜂王胎、火龍果，提升抵抗力、促進腸道蠕動及平衡健康菌叢' },
-    { image: '極鮮烏魚', name: '極鮮烏魚', en: 'mullet',  des: '單一肉源減少毛孩過敏機率，餐包添加蜂王胎、火龍果，提升抵抗力、促進腸道蠕動及平衡健康菌叢' },
-    { image: '水針虱目魚', name: '水針 & 虱目魚', en: 'Needlefish & Milkfish',  des: '單一肉源減少毛孩過敏機率，餐包添加蜂王胎、火龍果，提升抵抗力、促進腸道蠕動及平衡健康菌叢' },
+    { id: 1, image: '香燉嫩雞', name: '香燉嫩雞', en: 'chicken',  des: '單一肉源減少毛孩過敏機率，餐包添加蜂王胎、火龍果，提升抵抗力、促進腸道蠕動及平衡健康菌叢' },
+    { id: 2, image: '白帶魚雞肉', name: '白帶魚 & 雞肉', en: 'Hairtail & Chicken',  des: '單一肉源減少毛孩過敏機率，餐包添加蜂王胎、火龍果，提升抵抗力、促進腸道蠕動及平衡健康菌叢' },
+    { id: 3, image: '極鮮烏魚', name: '極鮮烏魚', en: 'mullet',  des: '單一肉源減少毛孩過敏機率，餐包添加蜂王胎、火龍果，提升抵抗力、促進腸道蠕動及平衡健康菌叢' },
+    { id: 4, image: '水針虱目魚', name: '水針 & 虱目魚', en: 'Needlefish & Milkfish',  des: '單一肉源減少毛孩過敏機率，餐包添加蜂王胎、火龍果，提升抵抗力、促進腸道蠕動及平衡健康菌叢' },
 ])
 
 </script>
@@ -80,14 +69,24 @@ $color2: #F3994F;
 $color3: #555555;
 
 section {
+    overflow: hidden;
     background-color: $bg;
     padding: 140px 0;
     .wrapper {
         position: relative;
     }
 }
+.mainProduct {
+    @media screen and (min-width: 992px) {
+        padding-left: 11.875vw;
+    }
+    .product {
+        .cover {
+            margin: 0 5.20834vw;
+        }
+    }
+}
 .product {
-    padding-left: 11.875vw;
     .name {
         width: 9.375vw;
         width: 180px;
@@ -108,9 +107,8 @@ section {
     }
     .cover {
         width: 18.34vw;
-        margin: 0 5.20834vw;
         &::before {
-            padding-bottom: 153.125%;
+            padding-top: 153.125%;
         }
     }
     .intro {
@@ -125,17 +123,25 @@ section {
     }
 }
 .settingsList {
-    max-height: 300px;
-    width: 100%;
+    height: 300px;
+    width: 144%;
     overflow: hidden;
     position: absolute;
     z-index: 0;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    img {
-        -webkit-filter: blur(5px);
-        filter: blur(5px);
+    bottom: 0;
+    transform: translate(-50%, -5%);
+    .product {
+        width: 9.47917vw;
+    }
+    .cover {
+        height: 100%;
+        max-height: 300px;
+        img {
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+            object-fit: contain;
+        }
     }
 }
 </style>
